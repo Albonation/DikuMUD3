@@ -1,20 +1,46 @@
-.idea/
-cmake-build-debug/
-cmake-build-debug-coverage/
-cmake-build-default/
-cmake-build-minsizerel/
-cmake-build-release/
-cmake-build-relwithdebinfo/
-build/
-.*.swp
+# =======================================
+# IDE and Editor Configs
+# =======================================
+.idea/                # JetBrains IDEs
+.idea/*.iml               # JetBrains module files
+.*.swp                # Vim swap files
 .swp
-CMakeCache.txt
-CMakeFiles
-cmake_install.cmake
-compile_commands.json
-Makefile
-CTestTestfile.cmake
-Testing/
-unit_tests/CTestTestfile.cmake
+*~                   # Common temp files
+
+# OS-specific files
+.DS_Store            # macOS
+Thumbs.db            # Windows
+
+# =======================================
+# Build and Compilation Outputs
+# =======================================
+build/
+cmake-build-*/
+*.o
+*.log
 core.*
 gmon.out
+
+# CMake artifacts
+.cmake/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+compile_commands.json
+CTestTestfile.cmake
+Testing/
+
+# Unit test CTest artifacts
+unit_tests/CTestTestfile.cmake
+
+# =======================================
+# Binaries
+# =======================================
+**/vme
+**/mplex
+
+# =======================================
+# Ignore all player data
+# =======================================
+vme/lib/ply
