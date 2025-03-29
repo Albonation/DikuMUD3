@@ -1,46 +1,81 @@
-# =======================================
-# IDE and Editor Configs
-# =======================================
-.idea/                # JetBrains IDEs
-.idea/*.iml               # JetBrains module files
-.*.swp                # Vim swap files
-.swp
-*~                   # Common temp files
+# ======================================
+# JetBrains CLion / IntelliJ IDE Configs
+# ======================================
+.idea/
+.idea/*
 
-# OS-specific files
-.DS_Store            # macOS
-Thumbs.db            # Windows
+# ======================================
+# IntelliJ project/module/workspace files
+# ======================================
+*.iml
 
-# =======================================
-# Build and Compilation Outputs
-# =======================================
-build/
-cmake-build-*/
+# ======================================
+# Build Artifacts
+# ======================================
 *.o
-*.log
-core.*
-gmon.out
+*.obj
+*.so
+*.a
+*.out
+*.exe
+*.dll
+*.lib
 
-# CMake artifacts
-.cmake/
-CMakeCache.txt
-CMakeFiles/
-cmake_install.cmake
+# ======================================
+# CMake build directories (common)
+# ======================================
+build/
+cmake-build-debug/
+cmake-build-release/
+cmake-build-relwithdebinfo/
+cmake-build-minsizerel/
+
+# ======================================
+# Make/CMake/CTest files
+# ======================================
 Makefile
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
 compile_commands.json
 CTestTestfile.cmake
 Testing/
 
-# Unit test CTest artifacts
-unit_tests/CTestTestfile.cmake
+# ======================================
+# Debug/Profiling files
+# ======================================
+core.*
+*.log
+gmon.out
 
-# =======================================
-# Binaries
-# =======================================
-**/vme
-**/mplex
+# ======================================
+# OS-specific junk files
+# ======================================
+.DS_Store     # macOS
+Thumbs.db     # Windows
+ehthumbs.db   # Windows
+desktop.ini   # Windows
 
-# =======================================
-# Ignore all player data
-# =======================================
-vme/lib/ply
+# ======================================
+# Vim / Editor backups and temp files
+# ======================================
+*.swp
+*.swo
+*~
+.*.swp
+.swp
+
+# ======================================
+# DikuMUD-specific binaries/logs (adjust as needed)
+# ======================================
+vme/bin/vme
+vme/bin/mplex
+vme.log
+mplex.log
+
+# ======================================
+# Game runtime data you don’t want versioned
+# ======================================
+vme/lib/players.id
+vme/lib/players/
+vme/lib/logs/
